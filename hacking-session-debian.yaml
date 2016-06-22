@@ -19,3 +19,6 @@ run:
         - export IRC_USER
         - export NOTIFY_URL
         - ./invoke_session_debian "$GATEWAY"
+        - ntpdate pool.ntp.org
+        - mkdir /root/nfs
+        - mount storage.internal.efficios.com:/storage/jenkins-lava/jdesfossez/root /root/nfs
