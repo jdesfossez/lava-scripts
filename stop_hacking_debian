@@ -1,4 +1,5 @@
 #!/bin/bash
+umount /root
 rm /run/hacking/hacking.pid
 rm ~/.ssh/authorized_keys
 /etc/init.d/ssh stop
