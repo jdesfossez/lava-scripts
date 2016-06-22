@@ -61,6 +61,10 @@ echo $$ > /run/hacking/hacking.pid
 TIMESTAMP=`stat -c %Y /run/hacking/hacking.pid`
 STARTED=false
 TERMINATED=false
+
+ntpdate pool.ntp.org
+mount storage.internal.efficios.com:/storage/jenkins-lava/jdesfossez/root /root
+
 echo "Hacking session active..."
 lava-test-case hacking-session-active --result pass
 tail -f /var/log/syslog &
